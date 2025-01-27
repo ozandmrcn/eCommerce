@@ -18,9 +18,10 @@ This project features a simple e-commerce site where users can interact with a p
 
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Desktop%20Computer.png" alt="Desktop Computer" width="25" height="25" /> Demo
 You can view a demo of the project by visiting the following link:  
-[Demo Link](https://ozanecommerce.netlify.app/)
+[eCommerce Demo](https://ozanecommerce.netlify.app/)
 
 ## Preview
+![brave_gOFoB4RyuP (1)](https://github.com/user-attachments/assets/745fed23-ad10-4259-a7a5-3bd57b583e18)
 
 
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/E-Mail.png" alt="E-Mail" width="25" height="25" /> Contact
