@@ -23,34 +23,31 @@ const fetchProducts = async () => {
 };
 
 // render products to the UI
-const renderProducts = (products, addToCartCallback) => {
-  const productList = document.getElementById("product-list");
+const renderProducts = (products, callBackFuntion) => {
+  // map through products and create a product card for each product
+  elements.productList.innerHTML = products
+    .map(
+      (product) => `<div class="product">
+          <!-- Image -->
+          <img
+            src="${product.image}"
+            class="product-image"
+            alt="product-image"
+          />
+          <!-- Info -->
+          <div class="product-info">
+            <h2 class="product-title">${product.title}</h2>
+            <p class="product-price">$${product.price}</p>
+            <a href="#" class="add-to-cart" data-id="${product.id}">Add to cart</a>
+          </div>
+        </div>`
+    )
+    .join("");
 
-  // Ensure product-list exists before proceeding
-  if (!productList) {
-    console.error("Product list element not found.");
-    return;
-  }
-
-  productList.innerHTML = ""; // Clear previous products if any
-
-  products.forEach((product) => {
-    const productElement = document.createElement("div");
-    productElement.classList.add("product");
-
-    productElement.innerHTML = `
-      <img src="${product.image}" alt="${product.name}" class="product-image" />
-      <div class="product-info">
-        <h2 class="product-title">${product.name}</h2>
-        <p class="product-price">${product.price}</p>
-        <button class="add-to-cart" data-id="${product.id}">Add to cart</button>
-      </div>
-    `;
-
-    const addToCartButton = productElement.querySelector(".add-to-cart");
-    addToCartButton.addEventListener("click", (e) => addToCartCallback(e));
-
-    productList.appendChild(productElement);
+  const addToCartButtons = document.querySelectorAll(".add-to-cart");
+  // add event listener to each add to cart button
+  addToCartButtons.forEach((button) => {
+    button.addEventListener("click", callBackFuntion); // add product to cart
   });
 };
 
